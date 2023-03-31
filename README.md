@@ -1,6 +1,6 @@
 # webDevForInfoSystems
 
-This is a Django framework based web site for a sports management system.
+This is a Django framework based web site for a Dairy which sells various dairy products
 
 Backend language: Python
 framework: Django
