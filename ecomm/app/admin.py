@@ -13,12 +13,12 @@ class ProductModelAdmin(admin.ModelAdmin):
 class CustomerModelAdmin(admin.ModelAdmin):
     list_display = ['id','user','locality','city','state','zipcode']
 
-# @admin.register(Cart)
-# class CartModelAdmin(admin.ModelAdmin):
-#     list_display = ['id','user','products','quantity']
-#     def products(self,obj):
-#         link = reverse("admin:app_product_change",args=[obj.product.pk])
-#         return format_html('<a href="{}">{}</a>',link, obj.product.title)
+@admin.register(Cart)
+class CartModelAdmin(admin.ModelAdmin):
+    list_display = ['id','user','products','quantity']
+    def products(self,obj):
+        link = reverse("admin:app_product_change",args=[obj.product.pk])
+        return format_html('<a href="{}">{}</a>',link, obj.product.title)
 
 @admin.register(Payment)
 class PaymentModelAdmin(admin.ModelAdmin):
